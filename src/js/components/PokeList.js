@@ -22,7 +22,12 @@ class PokeList extends React.Component {
     const filteredPokemon = this.props.pokemon.filter(pokemon => {
       return pokemon.name.includes(this.props.textFilter.toLowerCase());
     })
-
+    
+  if(filteredPokemon.length === 0){
+    return (
+      <h2 className='poke-list__no-results'>No Results</h2>
+    )
+  }
     return (
       filteredPokemon.map(pokemon => (
         <PokeCard 

@@ -17,3 +17,8 @@
   }
 }
 
+.poke-list__no-results {
+  width:100%;
+  grid-column:1/-1;
+  text-align: center;
+}
