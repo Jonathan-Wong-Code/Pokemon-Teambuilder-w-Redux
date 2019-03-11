@@ -3,7 +3,6 @@ import PokeTeamListItem from './PokeTeamListItem';
 import EmptyTeamListItem from './EmptyTeamListItem';
 import './../../styles/components/PokeTeamList.css';
 
-
 const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
   const renderPokeTeam = () => {
     const emptySlots = [1, 2, 3, 4, 5, 6];

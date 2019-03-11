@@ -1,9 +1,7 @@
 import React from 'react';
-import database from './../firebase/firebase';
 import SavedTeamsList from './SavedTeamsList';
 import './../../styles/components/SavedTeamsPage.css';
 import { connect } from 'react-redux';
-import { setSavedTeams } from './../actions/pokeTeam';
 
 class SavedTeamsPage extends React.Component {
   _isMounted = false;

@@ -2,13 +2,12 @@ import React from 'react';
 import SavedTeamCell from './SavedTeamsCell';
 import './../../styles/components/SavedTeamsList.css';
 
-const SavedTeamsList = ({ savedTeams, handleRemoveTeam }) => {
+const SavedTeamsList = ({ savedTeams }) => {
   const renderTeamCell = () => savedTeams.map(team => {
     return (
       <SavedTeamCell 
         key={team.id} 
         team={team} 
-        handleRemoveTeam={handleRemoveTeam}
       />
     );
   });

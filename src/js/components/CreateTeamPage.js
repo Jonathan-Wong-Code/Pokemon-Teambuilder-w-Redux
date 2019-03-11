@@ -4,7 +4,7 @@ import BuildPokeTeamPage from './BuildPokeTeamPage';
 import database from './../firebase/firebase';
 import { addPokeTeam } from './../actions/pokeTeam';
 
-const CreateTeamPage = ({ authId, history, addPokeTeam }) => {
+const CreateTeamPage = ({ history, addPokeTeam }) => {
   const handleAddTeam = (pokeTeam) => {
     addPokeTeam(pokeTeam);
   };

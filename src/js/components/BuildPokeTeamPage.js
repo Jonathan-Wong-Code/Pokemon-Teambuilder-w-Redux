@@ -8,7 +8,6 @@ import PokeTeamList from './PokeTeamList';
 import SaveTeamListBtn from './SavePokeTeamBtn'
 import SavePokeTeamModal from './SavePokeTeamModal';
 import './../../styles/components/BuildPokeTeamPage.css'
-import { connect } from 'react-redux';
 
 class BuildPokeTeamPage extends React.Component {
   constructor(props) {
