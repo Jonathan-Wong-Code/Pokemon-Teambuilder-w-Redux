@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import BuildPokeTeamPage from './BuildPokeTeamPage';
 import { editPokeTeam } from './../actions/pokeTeam';
-import { connect } from 'react-redux';
+
 const EditTeamPage = ({ editPokeTeam, editedTeam, history }) => {
   const handleEditTeam = (pokeTeam) => {
     editPokeTeam(pokeTeam);

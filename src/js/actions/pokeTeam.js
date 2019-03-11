@@ -5,9 +5,7 @@ import database from './../firebase/firebase';
 export const addPokeTeam = (pokeTeam) => async (dispatch, getState) => {
   
   const uid = getState().auth.uid;
-  console.log(uid)
   const response = await database.ref(`users/${uid}/pokemon`).push(pokeTeam);
-  console.log(response);
   const newTeamObject = ({
     ...pokeTeam,
     id: response.key
@@ -56,8 +54,4 @@ export const setSavedTeams = () => async (dispatch, getState) => {
     type: SET_SAVED_TEAMS,
     savedTeams
   });
-}
-
-export const fetchTeam = () => async dispatch => {
-  
 }
