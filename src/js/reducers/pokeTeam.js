@@ -1,4 +1,5 @@
-import { ADD_TEAM, DELETE_TEAM, EDIT_TEAM, SET_SAVED_TEAMS, LOGOUT } from './../actions/types'
+import { ADD_TEAM, DELETE_TEAM, EDIT_TEAM, SET_SAVED_TEAMS, LOGOUT } from './../actions/types';
+
 const pokeTeamReducer = (state = {}, action) => {
   switch(action.type) {
 

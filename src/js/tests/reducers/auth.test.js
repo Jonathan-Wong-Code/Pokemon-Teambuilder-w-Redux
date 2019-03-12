@@ -1,7 +1,7 @@
 import authReducer from './../../reducers/auth';
 import { LOGIN, LOGOUT, LOGIN_GUEST } from './../../actions/types';
-describe('the auth reducer', () => {
 
+describe('the auth reducer', () => {
   it('Should log the user in with their uid', () => {
     const action = {
       type : LOGIN,
