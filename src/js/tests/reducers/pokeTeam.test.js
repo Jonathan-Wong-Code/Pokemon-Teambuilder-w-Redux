@@ -1,7 +1,7 @@
 import { ADD_TEAM, 
   EDIT_TEAM, 
   SET_SAVED_TEAMS, 
-  RESET_SAVED_TEAMS, 
+  LOGOUT,
   DELETE_TEAM 
 } 
 from './../../actions/types';
@@ -50,9 +50,42 @@ describe('The pokeTeam Reducer', () => {
       [pokeTeam.team2.id] : pokeTeam.team2,
       [pokeTeam.team3.id] : pokeTeam.team3
     }, action);
+
     expect(result).toEqual({
       [pokeTeam.team2.id] : pokeTeam.team2,
       [pokeTeam.team3.id] : pokeTeam.team3
     })
+  })
+
+  it('Should set the saved teams from firebase', () => {
+    const action = {
+      type: SET_SAVED_TEAMS,
+      savedTeams : {
+        [pokeTeam.team1.id] : pokeTeam.team1,
+        [pokeTeam.team2.id] : pokeTeam.team2,
+        [pokeTeam.team3.id] : pokeTeam.team3
+      }
+    }
+
+    const result = pokeTeamReducer({}, action);
+    expect(result).toEqual({
+        [pokeTeam.team1.id] : pokeTeam.team1,
+        [pokeTeam.team2.id] : pokeTeam.team2,
+        [pokeTeam.team3.id] : pokeTeam.team3
+    });
+  });
+
+  it('should reset the saved teams', () => {
+    const initialState = {
+      [pokeTeam.team1.id] : pokeTeam.team1,
+      [pokeTeam.team2.id] : pokeTeam.team2,
+      [pokeTeam.team3.id] : pokeTeam.team3
+    }
+    const action = {
+      type: LOGOUT
+    }
+
+    const result = pokeTeamReducer({initialState}, action);
+    expect(result).toEqual({});
   })
 });
