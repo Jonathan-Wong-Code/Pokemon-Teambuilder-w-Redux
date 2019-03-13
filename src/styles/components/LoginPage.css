@@ -67,7 +67,7 @@
 
 @media(max-width: 450px) {
   .login {
-    align-items: center;
+    align-items: flex-start;
   }
   .login__buttons{
     width: 80%;
