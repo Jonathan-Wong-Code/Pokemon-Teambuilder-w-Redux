@@ -93,7 +93,8 @@ img {
 @media (max-width: 500px) {
   .btn {
     background: linear-gradient(45deg, lightgrey, white, lightgrey);
-    background-size: 100%
+    background-size: 100%;
+    outline:none;
   }
 
   .btn:hover, .btn:focus {
@@ -102,6 +103,8 @@ img {
     color:#000;
     text-shadow:none;
     border:1px solid #000;
+    outline:none;
+
   }
 }
 
