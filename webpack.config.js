@@ -73,7 +73,7 @@ module.exports = (env) =>{
 					         options: {
 					             sourceMap: true
 					         }
-               }
+					     }
 					 ]
 				}, {
           test : /\.(gif|png|jpe?g|svg)$/i,
