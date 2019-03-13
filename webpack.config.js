@@ -73,9 +73,7 @@ module.exports = (env) =>{
 					         options: {
 					             sourceMap: true
 					         }
-               }, {
-                  loader: 'postcss-loader'
-               }  
+               }
 					 ]
 				}, {
           test : /\.(gif|png|jpe?g|svg)$/i,
