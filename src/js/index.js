@@ -13,10 +13,6 @@ import { setSavedTeams } from './actions/pokeTeam';
 
 const store = configureStore();
 
-store.subscribe(() => {
-	console.log(store.getState());
-});
-
 const jsx = (
   <Provider store={store}>
     <App />
