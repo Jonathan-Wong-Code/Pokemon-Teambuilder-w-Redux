@@ -111,9 +111,10 @@
 }
 
 @media(max-width: 450px) {
-  .header__heading {
+  .header__heading--login {
     font-size: 2rem;
     letter-spacing: 2px;
-    align-self: end;
+    align-self: start;
+    margin-top:25%;
   }
 }
