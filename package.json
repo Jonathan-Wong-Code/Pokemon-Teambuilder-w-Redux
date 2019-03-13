@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.13.0"
+  },
   "scripts": {
     "dev": "webpack --mode development",
     "build:dev": "webpack --mode production",
