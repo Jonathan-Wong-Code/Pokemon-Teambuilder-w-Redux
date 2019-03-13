@@ -1,9 +1,8 @@
-import { ADD_TEAM, DELETE_TEAM, EDIT_TEAM, SET_SAVED_TEAMS, RESET_SAVED_TEAMS } from './types';
+import { ADD_TEAM, DELETE_TEAM, EDIT_TEAM, SET_SAVED_TEAMS } from './types';
 import database from './../firebase/firebase';
-// import regeneratorRuntime from "regenerator-runtime";
+import regeneratorRuntime from "regenerator-runtime";
 
 export const addPokeTeam = (pokeTeam) => async (dispatch, getState) => {
-  
   const uid = getState().auth.uid;
   const response = await database.ref(`users/${uid}/pokemon`).push(pokeTeam);
   const newTeamObject = ({

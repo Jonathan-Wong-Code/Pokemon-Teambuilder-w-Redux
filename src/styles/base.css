@@ -80,16 +80,19 @@ img {
   transform: none;
 }
 
-/* @media (max-width: 900px) {
-  .btn {
-     background: linear-gradient(45deg, lightgrey, white, lightgrey);
-     background-size: auto;
-  }
-} */
-
 @media (max-width: 750px) {
   body {
     font-size: 1rem;
+  }
+
+  .btn:hover, .btn:focus {  
+    background-position: 100%;
+  }
+}
+
+@media (max-width: 500px) and (max-height: 600px) {
+  .btn {
+    background-size: 240%;
   }
 }
 
