@@ -97,7 +97,6 @@ class BuildPokeTeamPage extends React.Component {
     this.props.pokeTeam ? 
     <h2 className='build-page__heading'>
       Editing Team
-       {/* {this.props.pokeTeam.name} */}
     </h2> 
     : null
   )

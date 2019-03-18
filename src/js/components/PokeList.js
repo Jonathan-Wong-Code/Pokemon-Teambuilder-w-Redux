@@ -1,6 +1,7 @@
 import React from 'react';
 import PokeCard from './PokeCard';
 import Modal from './Modal';
+import ConfirmSave from './ConfirmSave';
 import './../../styles/components/PokeList.css';
 
 class PokeList extends React.Component { 
@@ -8,7 +9,8 @@ class PokeList extends React.Component {
     super();
 
     this.state = {
-      showModal : false,
+      showPokeModal : false,
+      showSaveModal: false,
       currentPokemon : null,
       error : ''
     };
@@ -41,17 +43,30 @@ class PokeList extends React.Component {
 
   handlePokeCardClick = (currentPokemon) => {
     this.setState({ currentPokemon });
-    this.setState({ showModal : true });
+    this.handleTogglePokeModal();
   }
 
-  handleModalCancel = () => {
-    this.setState({ currentPokemon : null });
+  handleTogglePokeModal =() => {
+    this.setState(prevState => {
+      return {
+        showPokeModal : !prevState.showPokeModal
+      }
+    })
+  }
+
+  handleToggleSaveModal = () => {
+    this.setState(prevState => {
+      return {
+        showSaveModal : !prevState.showSaveModal
+      }
+    })
   }
 
   handleAddPokemon = () => {
     if(this.props.currentPokemonTeam.length < 6){
       this.props.handleAddPokemon(this.state.currentPokemon);
-      this.setState({ currentPokemon : null});
+      this.handleToggleSaveModal();
+      this.handleTogglePokeModal();
     } else {
       this.setState({ error : 'Team full! Remove a member' });
     }    
@@ -66,14 +81,22 @@ class PokeList extends React.Component {
             </ul>
         </div>
       { 
-        this.state.currentPokemon && 
+        this.state.showPokeModal && 
         <Modal
           pokemon={this.state.currentPokemon}
-          handleModalCancel={this.handleModalCancel}
+          handleTogglePokeModal={this.handleTogglePokeModal}
           handleAddPokemon={this.handleAddPokemon}
           error={this.state.error}
           handleSetFocus={this.handleSetFocus}
         /> 
+      }
+
+      {
+        this.state.showSaveModal &&
+        <ConfirmSave
+          pokemon={this.state.currentPokemon}
+          handleToggleSaveModal={this.handleToggleSaveModal}
+        />
       }
     </React.Fragment>
     )

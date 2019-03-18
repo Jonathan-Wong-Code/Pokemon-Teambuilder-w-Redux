@@ -53,6 +53,7 @@
 
 .team-cell__button {
   width: 40%;
+  padding:.2rem;
 }
 
 .team-cell__button:first-child{

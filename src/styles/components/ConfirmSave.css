@@ -1,0 +1,21 @@
+.confirm-save__modal {
+  width:20rem;
+  font-family: 'Jura', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight:400;
+  padding: 1.5rem;
+  background-image:linear-gradient(to right,lightgrey, white, lightgrey);
+  z-index:100000;
+}
+
+.confirm-save__btn {
+  margin:0 auto;
+}
+
+.confirm-save__name {
+  text-transform: uppercase;
+ 
+}
+
+

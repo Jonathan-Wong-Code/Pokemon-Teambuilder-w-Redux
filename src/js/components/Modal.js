@@ -1,11 +1,15 @@
 import React from 'react';
 import './../../styles/components/Modal.css';
 import PokemonTypes from './PokemonTypes';
+import ConfirmSave from './ConfirmSave';
 
 class Modal extends React.Component{
   constructor(){
     super();
 
+    this.state = {
+      showSave : false
+    }
     this.pokeModalButton = React.createRef();
   }
 
@@ -36,6 +40,7 @@ class Modal extends React.Component{
       </span> {stat.base_stat}
     </li>
   ));
+
   render() {
     return (
       <div className='modal__background' onClick={this.props.handleModalCancel}>
@@ -75,13 +80,19 @@ class Modal extends React.Component{
                Save to team
             </button>
             <button 
-              onClick={this.props.handleModalCancel} 
+              onClick={this.props.handleTogglePokeModal} 
               className='btn modal__btn'
             >
                Cancel
             </button>
           </div>
         </div>
+        {
+          this.state.showSave &&
+           <ConfirmSave 
+            pokemon={this.props.pokemon} handleModalCancel={this.props.handleModalCancel}
+           />
+           }
       </div>   
     );
   }

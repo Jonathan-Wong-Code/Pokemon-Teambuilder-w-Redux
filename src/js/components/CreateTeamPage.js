@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BuildPokeTeamPage from './BuildPokeTeamPage';
-import database from './../firebase/firebase';
 import { addPokeTeam } from './../actions/pokeTeam';
 
 const CreateTeamPage = ({ history, addPokeTeam }) => {
