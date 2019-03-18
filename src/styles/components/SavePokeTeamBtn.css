@@ -11,6 +11,29 @@
   margin: 3rem auto 0 auto;
 }
 
+.save-team__text {
+  padding: .5rem .7rem;
+  margin: 1rem .5rem 0 .5rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, lightgrey, white, lightgrey);
+  text-align:left;
+}
+
+@media(max-width: 600px) {
+  .save-team__text  {
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    margin: .5rem 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .save-team__text {
+    font-size:.8rem;
+  }
+}
+
+
 
 
 

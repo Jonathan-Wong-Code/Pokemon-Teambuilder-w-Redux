@@ -35,22 +35,6 @@ img {
   margin: 0 auto;
 }
 
-.page-text {
-  padding: .5rem .7rem;
-  margin: 1rem .5rem 0 .5rem;
-  border-radius: 10px;
-  background: linear-gradient(to right, lightgrey, white, lightgrey);
-  text-align:left;
-}
-
-@media(max-width: 600px) {
-  .page-text  {
-    font-size: .9rem;
-    padding: .3rem .5rem;
-    margin: .5rem 0;
-  }
-}
-
 .btn.is-active {
   background: red;
   color:white;
@@ -130,9 +114,5 @@ img {
 @media (max-width: 350px) {
   body {
     font-size: .9rem;
-  }
-
-  .page-text {
-    font-size:.8rem;
   }
 }

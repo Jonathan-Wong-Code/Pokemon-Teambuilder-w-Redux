@@ -27,10 +27,10 @@ class PokeList extends React.Component {
     
   if(filteredPokemon.length === 0){
     return (
-      <h2 className='poke-list__no-results'>No Results</h2>
-    )
-  }
-    return (
+        <h2 className='poke-list__no-results'>No Results</h2>
+      )
+    }
+  return (
       filteredPokemon.map(pokemon => (
         <PokeCard 
           key={pokemon.name} 

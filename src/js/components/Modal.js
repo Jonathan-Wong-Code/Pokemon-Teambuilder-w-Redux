@@ -7,9 +7,6 @@ class Modal extends React.Component{
   constructor(){
     super();
 
-    this.state = {
-      showSave : false
-    }
     this.pokeModalButton = React.createRef();
   }
 
@@ -87,12 +84,6 @@ class Modal extends React.Component{
             </button>
           </div>
         </div>
-        {
-          this.state.showSave &&
-           <ConfirmSave 
-            pokemon={this.props.pokemon} handleModalCancel={this.props.handleModalCancel}
-           />
-           }
       </div>   
     );
   }
