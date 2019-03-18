@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import NavBar from './NavBar';
 import './../../styles/components/Header.css';
 import logo from './../../images/logo.png';
@@ -8,7 +9,7 @@ import bulbasaur from './../../images/bulbasaur.png';
 import charmander from './../../images/charmander.png';
 import eevee from './../../images/eevee.png';
 import togepi from './../../images/togepi.png';
-import { connect } from 'react-redux';
+
 
 const Header = ({ history, isAuthenticated }) => {
   const headerClasses = isAuthenticated ? 'header' : 'header header--login';

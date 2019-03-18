@@ -1,7 +1,6 @@
 import React from 'react';
 import './../../styles/components/Modal.css';
 import PokemonTypes from './PokemonTypes';
-import ConfirmSave from './ConfirmSave';
 
 class Modal extends React.Component{
   constructor(){

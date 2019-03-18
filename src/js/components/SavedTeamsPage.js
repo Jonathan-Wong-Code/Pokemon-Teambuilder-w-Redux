@@ -4,8 +4,6 @@ import './../../styles/components/SavedTeamsPage.css';
 import { connect } from 'react-redux';
 
 class SavedTeamsPage extends React.Component {
-  _isMounted = false;
-
   constructor() {
     super();
 

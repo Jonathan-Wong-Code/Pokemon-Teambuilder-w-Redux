@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './../../styles/components/SavedTeamCell.css';
 import { deletePokeTeam } from './../actions/pokeTeam';
+import './../../styles/components/SavedTeamCell.css';
 
 const SavedTeamsCell = ({ team, deletePokeTeam }) => {
   const renderPokemonImg = () => {

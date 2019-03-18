@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './../../styles/components/NavBar.css';
 import { startLogout, logout } from './../actions/auth';
+import './../../styles/components/NavBar.css';
+
 
 const NavBar = ({ startLogout, history, auth, logout }) => {
   const onLogoutClick = () => {

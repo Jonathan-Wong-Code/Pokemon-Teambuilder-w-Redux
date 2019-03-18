@@ -14,8 +14,8 @@ class ConfirmSave extends React.Component {
   
   render() {
     return (
-      <div className='modal__background'>
-        <div className='confirm-save__modal'>
+      <div className='modal__background' onClick={this.props.handleToggleSaveModal}>
+        <div className='confirm-save__modal' onClick={(e) => e.stopPropagation()}>
           <p>Saved <span className='confirm-save__name'>{this.props.pokemon.name}</span></p>
           <button 
             onClick={this.props.handleToggleSaveModal} 
@@ -28,18 +28,6 @@ class ConfirmSave extends React.Component {
       </div>
     );
   }
-};
-
-// const ConfirmSave = ({ pokemon, handleToggleSaveModal }) => {
-//   return (
-//     <div className='modal__background'>
-//       <div className='confirm-save__modal'>
-//         <p>Saved <span className='confirm-save__name'>{pokemon.name}</span></p>
-//         <button onClick={handleToggleSaveModal} className='btn confirm-save__btn'>Close</button>
-//       </div>
-//     </div>
-    
-//   );
-// };
+}
 
 export default ConfirmSave;
