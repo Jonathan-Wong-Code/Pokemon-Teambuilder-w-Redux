@@ -15,7 +15,8 @@ const SavePokeTeamBtn = ({ toggleModal, type, pokeTeam }) => {
           {type === 'create' ? 'Save Team' : 'Edit Team'}
         </button>
       )}
-      <p className='page-text'>Select 6 Pokemon below to save your team. Currently {pokeTeam.length}/6.</p>
+      <p className='page-text'> Search and pick 6 Pokemon to save. {window.innerWidth > 550 && <span>Currently {pokeTeam.length}/6.</span>} </p>
+      {window.innerWidth < 550 && <p className='page-text'>Currently {pokeTeam.length}/6.</p>}
     </div>
   );
 };

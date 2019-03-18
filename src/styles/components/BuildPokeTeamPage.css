@@ -64,6 +64,10 @@
     font-size: 1.5rem;
   }
 
+  .build-page__poke-team {
+    padding-bottom:1rem;
+  }
+
   .poke-search__wrapper {
     padding: 2rem 1rem;  
   }

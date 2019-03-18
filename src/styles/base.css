@@ -40,12 +40,14 @@ img {
   margin: 1rem .5rem 0 .5rem;
   border-radius: 10px;
   background: linear-gradient(to right, lightgrey, white, lightgrey);
+  text-align:left;
 }
 
 @media(max-width: 600px) {
   .page-text  {
     font-size: .9rem;
-    padding: .5rem;
+    padding: .3rem .5rem;
+    margin: .5rem 0;
   }
 }
 
@@ -124,5 +126,9 @@ img {
 @media (max-width: 350px) {
   body {
     font-size: .9rem;
+  }
+
+  .page-text {
+    font-size:.8rem;
   }
 }

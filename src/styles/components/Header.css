@@ -118,3 +118,9 @@
     margin-top:25%;
   }
 }
+
+@media(max-width: 400px) {
+  .header__heading {
+    font-size:2rem;
+  }
+}
