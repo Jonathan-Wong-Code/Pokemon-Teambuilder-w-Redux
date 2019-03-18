@@ -2,14 +2,16 @@
   background: url('./../../images/pokedex.png');
 }
 .build-page__heading {
-  width: 40%;
 
+  display:inline-block;
   font-size: 2.2rem;
   font-weight: 600;
   text-align: center;
-  
-  padding: .5rem;
-  margin: 2rem auto 5rem auto;
+  position:relative;
+  left:50%;
+  transform: translateX(-50%);
+  padding: .5rem 1rem;
+  margin: 2rem auto 0 auto;
   border-radius: 20px;
 
   color:#000;
@@ -53,17 +55,13 @@
   }
 
   .build-page__heading {
-    width: 75%;
     font-size: 1.8rem;
-    padding: .8rem 0;
-    margin-top: 0;
   }
 }
 
 @media(max-width: 550px) {
   .build-page__heading {
     font-size: 1.5rem;
-    margin-bottom: 3rem;
   }
 
   .poke-search__wrapper {
@@ -71,7 +69,13 @@
   }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
+
+  .build-page__heading {
+    margin:2rem 1rem 0 0;
+    font-size:1.2rem;
+  }
+
   .poke-search__wrapper {
     padding: 2rem .5rem;  
   }

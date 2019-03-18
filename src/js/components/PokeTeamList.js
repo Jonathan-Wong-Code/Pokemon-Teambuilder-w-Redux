@@ -4,9 +4,7 @@ import EmptyTeamListItem from './EmptyTeamListItem';
 import './../../styles/components/PokeTeamList.css';
 
 const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
-  const renderPokeTeam = () => {
-    const emptySlots = [1, 2, 3, 4, 5, 6];
-   
+  const renderPokeTeam = () => { 
     return pokeTeam.length > 0 ? (
       pokeTeam.map(pokemon => {
         return (
@@ -16,12 +14,7 @@ const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
             handleRemovePokemon={handleRemovePokemon}
           />
         );
-      })
-    ) : (
-      emptySlots.map(item => {
-        // return <EmptyTeamListItem key={item} index={item} />;
-      })
-    );
+      })) : null;
   };
 
   return (
