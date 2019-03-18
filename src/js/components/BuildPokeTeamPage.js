@@ -94,7 +94,11 @@ class BuildPokeTeamPage extends React.Component {
   }
   
   renderHeading = () => (
-    this.props.pokeTeam ? `Editing Team: ${this.props.pokeTeam.name}` : `Create Team`
+    this.props.pokeTeam ? 
+    <h2 className='build-page__heading'>
+      Editing Team: {this.props.pokeTeam.name}
+    </h2> 
+    : null
   )
 
   render() {
@@ -102,7 +106,7 @@ class BuildPokeTeamPage extends React.Component {
     return (
       <section className='build-page'>
         <section className='build-page__poke-team'>
-          <h2 className='build-page__heading'>{this.renderHeading()}</h2>
+          {this.renderHeading()}
           <PokeTeamList 
             pokeTeam ={this.state.currentPokemonTeam}
             handleRemovePokemon = {this.handleRemovePokemon}

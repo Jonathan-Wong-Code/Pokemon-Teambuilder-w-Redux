@@ -30,8 +30,6 @@ const renderApp = () => {
 	}
 };
 
-
-
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {    
     store.dispatch(login(user.uid));

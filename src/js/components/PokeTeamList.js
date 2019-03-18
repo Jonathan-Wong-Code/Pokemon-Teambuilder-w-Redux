@@ -19,7 +19,7 @@ const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
       })
     ) : (
       emptySlots.map(item => {
-        return <EmptyTeamListItem key={item} index={item} />;
+        // return <EmptyTeamListItem key={item} index={item} />;
       })
     );
   };

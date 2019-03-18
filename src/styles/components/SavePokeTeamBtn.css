@@ -12,17 +12,5 @@
   margin: 0 auto;
 }
 
-.save-team__selected {
-  padding: .5rem .7rem;
-  margin: 1rem .5rem 0 .5rem;
-  border-radius: 10px;
-  background: linear-gradient(to right, lightgrey, white, lightgrey);
-}
 
-@media(max-width: 600px) {
-  .save-team__selected {
-    font-size: .9rem;
-    padding: .5rem;
-  }
-}
 

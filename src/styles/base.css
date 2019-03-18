@@ -35,6 +35,20 @@ img {
   margin: 0 auto;
 }
 
+.page-text {
+  padding: .5rem .7rem;
+  margin: 1rem .5rem 0 .5rem;
+  border-radius: 10px;
+  background: linear-gradient(to right, lightgrey, white, lightgrey);
+}
+
+@media(max-width: 600px) {
+  .page-text  {
+    font-size: .9rem;
+    padding: .5rem;
+  }
+}
+
 .btn.is-active {
   background: red;
   color:white;
