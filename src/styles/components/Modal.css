@@ -98,7 +98,7 @@
 
  .modal__btn {
    width: 45%;
-   padding: .5rem 0;
+   height:2rem;
  }
 
  .modal__btn:not(:last-child) {
@@ -126,6 +126,10 @@
 @media(max-width: 900px) {
   .modal__body {
     width: 75%;
+  }
+
+  .modal__btn {
+    height:2.5rem;
   }
 }
 
@@ -180,7 +184,7 @@
 
   .modal__btn {
     padding: .5rem 0;
-    width:50%;
+    width:45%;
   }
 
   .modal__img-box {
@@ -300,6 +304,4 @@
     width: 40%;
     padding: .5rem 0;
   }
-
-
 }
