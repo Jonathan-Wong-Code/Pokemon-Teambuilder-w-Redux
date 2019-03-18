@@ -39,7 +39,7 @@ class Modal extends React.Component{
 
   render() {
     return (
-      <div className='modal__background' onClick={this.props.handleModalCancel}>
+      <div className='modal__background' onClick={this.props.handleTogglePokeModal}>
         <div className='modal__body' onClick={(e) => e.stopPropagation()}>
           <div className='modal__img-box'>
             <img 

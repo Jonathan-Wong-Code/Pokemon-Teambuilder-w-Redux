@@ -98,7 +98,7 @@
 
  .modal__btn {
    width: 45%;
-   height:2rem;
+   height:2.5rem;
  }
 
  .modal__btn:not(:last-child) {
@@ -126,10 +126,6 @@
 @media(max-width: 900px) {
   .modal__body {
     width: 75%;
-  }
-
-  .modal__btn {
-    height:2.5rem;
   }
 }
 
