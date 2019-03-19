@@ -48,7 +48,7 @@ export const Header = ({ history, isAuthenticated }) => {
           <img src={bulbasaur} alt='bulbasaur' className='poke-banner__img' />
         </li>
       </ul>
-      <h1 className={headingClasses}>Poke-Team Picker!</h1>
+      <h1 className={headingClasses}>Poke-Team Picker</h1>
       {isAuthenticated && <NavBar history={history} />}
     </header>
   );
