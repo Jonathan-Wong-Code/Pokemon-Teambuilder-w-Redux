@@ -9,6 +9,7 @@ import PrivateRoute from './../routes/PrivateRoute';
 import PublicRoute from './../routes/PublicRoute';
 
 const history = createHistory();
+
 const App = () => {
   return (
     <Router history={history}>

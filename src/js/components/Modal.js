@@ -22,6 +22,7 @@ export class Modal extends React.Component{
       <li 
         className='modal__ability' 
         key={ability.ability.name}
+        data-test='modal-ability'
       > 
         {ability.ability.name} 
       </li>    
@@ -29,7 +30,7 @@ export class Modal extends React.Component{
   });
 
   renderStats = () => this.props.pokemon.stats.map(stat => (
-    <li key={stat.stat.url}>
+    <li key={stat.stat.name} data-test='modal-stat'>
       <span className='modal__stat-name'>
         { stat.stat.name }:
       </span> {stat.base_stat}
@@ -52,15 +53,19 @@ export class Modal extends React.Component{
               data-test='modal-img'
             />
           </div>
-          <h2 className='modal__name'>{this.props.pokemon.name}</h2>
+          <h2 className='modal__name' data-test='modal-name'>
+            {this.props.pokemon.name}
+         </h2>
           <ul className='modal__attributes'>
-            <li className='modal__types'>
+            <li className='modal__types' data-test='modal-type'>
               <span className='modal__stat-name'>type: </span>
               {this.renderTypes()}
             </li>
       
             <li className='modal__stats'>
-              <ul className='modal__stats-list'>{this.renderStats()}</ul>
+              <ul className='modal__stats-list'>
+                {this.renderStats()}
+              </ul>
             </li>
   
             <li className='modal__abilities'>
