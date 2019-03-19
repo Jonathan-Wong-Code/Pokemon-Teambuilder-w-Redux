@@ -1,7 +1,7 @@
 import React from 'react';
 import PokemonTypes from './PokemonTypes';
 
-class Modal extends React.Component{
+export class Modal extends React.Component{
   constructor(){
     super();
 
@@ -38,13 +38,18 @@ class Modal extends React.Component{
 
   render() {
     return (
-      <div className='modal__background' onClick={this.props.handleTogglePokeModal}>
-        <div className='modal__body' onClick={(e) => e.stopPropagation()}>
+      <div className='modal__background' onClick={this.props.handleTogglePokeModal}
+        data-test='modal-component'
+      >
+        <div className='modal__body' onClick={(e) => e.stopPropagation()}
+          data-test='modal-body'
+        >
           <div className='modal__img-box'>
             <img 
               src={this.props.pokemon.sprites.front_default} 
               alt={this.props.pokemon.name} 
               className='modal__img'
+              data-test='modal-img'
             />
           </div>
           <h2 className='modal__name'>{this.props.pokemon.name}</h2>
@@ -71,12 +76,14 @@ class Modal extends React.Component{
               onClick={this.props.handleAddPokemon} 
               className='btn modal__btn'
               ref={this.pokeModalButton}
+              data-test='modal-save'
             >
                Save to team
             </button>
             <button 
               onClick={this.props.handleTogglePokeModal} 
               className='btn modal__btn'
+              data-test='modal-cancel'
             >
                Cancel
             </button>

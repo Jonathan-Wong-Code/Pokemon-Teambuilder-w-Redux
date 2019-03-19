@@ -9,7 +9,7 @@ const pokemon = {
       name : 'ability1'
     }
   }, {
-    abilility : {
+    ability : {
       name : 'ability2'
     }
   }],
