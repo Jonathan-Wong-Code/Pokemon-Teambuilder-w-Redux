@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NavBar from './NavBar';
-import './../../styles/components/Header.css';
 import logo from './../../images/logo.png';
 import pikachu from './../../images/pikachu.png';
 import squirtle from './../../images/squirtle.png';

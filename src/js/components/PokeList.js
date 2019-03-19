@@ -2,7 +2,6 @@ import React from 'react';
 import PokeCard from './PokeCard';
 import Modal from './Modal';
 import ConfirmSave from './ConfirmSave';
-import './../../styles/components/PokeList.css';
 
 class PokeList extends React.Component { 
   constructor() {

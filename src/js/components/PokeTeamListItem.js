@@ -1,6 +1,5 @@
 import React from 'react';
 import PokemonTypes from './PokemonTypes';
-import './../../styles/components/PokeTeamListItem.css';
 
 const PokeTeamListItem = ({ pokemon, handleRemovePokemon }) => {
   const onButtonClick = () => {

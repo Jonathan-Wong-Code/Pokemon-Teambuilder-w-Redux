@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../styles/components/PokemonTypes.css';
+
 
 const PokemonTypes = ({ type }) => {
   return (

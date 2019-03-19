@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../styles/components/SavePokeTeamBtn.css';
 
 const SavePokeTeamBtn = ({ toggleModal, type, pokeTeam }) => {
   const onButtonClick = () => {

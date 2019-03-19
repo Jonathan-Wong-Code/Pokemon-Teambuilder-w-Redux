@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import './../../styles/components/PokeCard.css';
 
 class PokeCard extends React.Component {
   _isMounted = false;

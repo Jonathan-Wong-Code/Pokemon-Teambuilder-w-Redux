@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import BuildPokeTeamPage from './BuildPokeTeamPage';
 import { addPokeTeam } from './../actions/pokeTeam';
 
-const CreateTeamPage = ({ history, addPokeTeam }) => {
+export const CreateTeamPage = ({ history, addPokeTeam }) => {
   const handleAddTeam = (pokeTeam) => {
     addPokeTeam(pokeTeam);
   };

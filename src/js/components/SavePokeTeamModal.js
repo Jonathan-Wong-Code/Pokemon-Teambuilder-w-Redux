@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../styles/components/SavePokeTeamModal.css';
 
 class SavePokeTeamModal extends React.Component {
   constructor(props) {

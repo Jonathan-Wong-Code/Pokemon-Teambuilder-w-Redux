@@ -1,6 +1,6 @@
 import React from 'react';
 import PokeTeamListItem from './PokeTeamListItem';
-import './../../styles/components/PokeTeamList.css';
+
 
 const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
   const renderPokeTeam = () => { 

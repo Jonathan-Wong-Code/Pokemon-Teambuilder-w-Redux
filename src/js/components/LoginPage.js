@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../styles/components/LoginPage.css';
 import { connect } from 'react-redux';
 import { startLogin, loginGuest } from './../actions/auth';
 

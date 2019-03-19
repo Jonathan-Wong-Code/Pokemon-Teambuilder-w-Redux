@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../styles/components/Modal.css';
 import PokemonTypes from './PokemonTypes';
 
 class Modal extends React.Component{

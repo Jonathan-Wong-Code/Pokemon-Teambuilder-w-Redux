@@ -76,7 +76,6 @@ describe('the addPokeTeam action creator', () => {
       [pokeTeam.team3.id] : updatedTeam
     });
     
-    // await database.ref(`users/${uid}/${pokeTeam.team3.id}`).update(updatedTeam);
     const snapshot = await database.ref(`users/${uid}/pokemon/${pokeTeam.team3.id}`).once('value');
     expect(snapshot.val()).toEqual(updatedTeam);
   });

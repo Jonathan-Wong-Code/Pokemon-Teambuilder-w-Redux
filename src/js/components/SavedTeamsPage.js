@@ -1,6 +1,5 @@
 import React from 'react';
 import SavedTeamsList from './SavedTeamsList';
-import './../../styles/components/SavedTeamsPage.css';
 import { connect } from 'react-redux';
 
 class SavedTeamsPage extends React.Component {
