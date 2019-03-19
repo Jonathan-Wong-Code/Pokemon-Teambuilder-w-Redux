@@ -9,7 +9,7 @@ const uid = 'test123';
 describe('the addPokeTeam action creator', () => {
   let store;
   beforeEach(async (done) => {
-    await database.ref(`test/${uid}/${pokeTeam.team3.id}`).set(pokeTeam.team3).then(() => done());
+    await database.ref(`users/${uid}/pokemon/${pokeTeam.team3.id}`).set(pokeTeam.team3).then(() => done());
     const initialState = {
       savedTeams : {
         [pokeTeam.team3.id] : pokeTeam.team3
@@ -39,6 +39,9 @@ describe('the addPokeTeam action creator', () => {
     await store.dispatch(deletePokeTeam(pokeTeam.team3.id));
     const newState = store.getState();
     expect(newState.savedTeams).toEqual({});
+    
+    const snapshot = await database.ref(`users/${uid}/pokemon/${pokeTeam.team3.id}`).once('value');
+    expect(snapshot.val()).toBeFalsy();
   });
 
   it('should edit a pokemon team in redux and firebase', async () => {
@@ -73,9 +76,29 @@ describe('the addPokeTeam action creator', () => {
       [pokeTeam.team3.id] : updatedTeam
     });
     
-    const snapshot = await database.ref(`test/${uid}`).updat('value');
+    // await database.ref(`users/${uid}/${pokeTeam.team3.id}`).update(updatedTeam);
+    const snapshot = await database.ref(`users/${uid}/pokemon/${pokeTeam.team3.id}`).once('value');
     expect(snapshot.val()).toEqual(updatedTeam);
   });
-
-  
 })//end describe
+
+describe("the setSavedTeams action creator", () => {
+  let store;
+  beforeEach(() => {
+    database.ref(`users/${uid}/pokemon`).set(pokeTeam);
+    const initialState = {
+      auth : {
+        uid
+      },
+
+      savedTeams : {}
+    }
+    store=storeFactory(initialState);
+  });
+
+  it("Should set the state as the saved pokemon teams on firebase", async () => {
+    await store.dispatch(setSavedTeams());
+    const newState = store.getState();
+    expect(newState.savedTeams).toEqual(pokeTeam);
+  })
+})
