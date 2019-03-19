@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { startLogin, loginGuest } from './../actions/auth';
 
 
-const LoginPage = ({ startLogin, loginGuest, history }) => {
+export const LoginPage = ({ startLogin, loginGuest, history }) => {
   const onLoginClick = () => {
     startLogin();
   };
@@ -14,10 +14,20 @@ const LoginPage = ({ startLogin, loginGuest, history }) => {
   };
   
   return (
-    <section className='login'>
+    <section className='login' data-test='login-component'>
       <div className='login__buttons'>
-        <button onClick={onLoginClick} className='login__button btn'>Login with Google</button>
-        <button onClick={onGuestLoginClick} className='login__button btn'>Guest</button>
+        <button 
+          onClick={onLoginClick} 
+          className='login__button btn'
+          data-test='login-button'
+        >Login with Google
+        </button>
+        <button 
+          onClick={onGuestLoginClick} 
+          className='login__button btn'
+          data-test='login-guest-button'
+        >Guest
+        </button>
       </div>
     </section>
   );

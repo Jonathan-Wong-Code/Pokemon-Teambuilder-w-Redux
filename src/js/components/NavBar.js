@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout, logout } from './../actions/auth';
 
-
-
 const NavBar = ({ startLogout, history, auth, logout }) => {
   const onLogoutClick = () => {
     if (auth === 'guest') {
@@ -16,7 +14,7 @@ const NavBar = ({ startLogout, history, auth, logout }) => {
   };
 
   return (
-    <nav className='navbar'>
+    <nav className='navbar' data-test='nav-bar-component'>
       <ul className='navbar__nav'>
         <li className='navbar__item'>
           <NavLink to='/create' activeClassName='is-active' className='navbar__link btn'>

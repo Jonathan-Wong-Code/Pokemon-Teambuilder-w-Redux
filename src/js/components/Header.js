@@ -1,22 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NavBar from './NavBar';
-import logo from './../../images/logo.png';
-import pikachu from './../../images/pikachu.png';
-import squirtle from './../../images/squirtle.png';
-import bulbasaur from './../../images/bulbasaur.png';
-import charmander from './../../images/charmander.png';
-import eevee from './../../images/eevee.png';
+
 import togepi from './../../images/togepi.png';
 
+// const togepi = require('./../../images/togepi.png');
+const pikachu = require('./../../images/pikachu.png');
+const squirtle = require('./../../images/squirtle.png');
+const logo = require('./../../images/logo.png');
+const bulbasaur = require('./../../images/bulbasaur.png');
+const charmander = require('./../../images/charmander.png');
+const eevee = require('./../../images/eevee.png');
 
-const Header = ({ history, isAuthenticated }) => {
+export const Header = ({ history, isAuthenticated }) => {
   const headerClasses = isAuthenticated ? 'header' : 'header header--login';
   const headingClasses = isAuthenticated ? 'header__heading' : 'header__heading header__heading--login';
   const pokeBannerClasses = isAuthenticated ? 'poke-banner' : 'poke-banner poke-banner--login';
-  
+
   return (
-    <header className={headerClasses}> 
+    <header className={headerClasses} data-test='header-component'> 
       <ul className={pokeBannerClasses}>
         <li className='poke-banner__item'>
           <img src={togepi} alt='togepi' className='poke-banner__img' />

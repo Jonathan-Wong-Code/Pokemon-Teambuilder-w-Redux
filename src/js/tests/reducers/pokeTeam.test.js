@@ -5,7 +5,6 @@ import { ADD_TEAM,
   DELETE_TEAM 
 } 
 from './../../actions/types';
-
 import pokeTeamReducer from './../../reducers/pokeTeam';
 import pokeTeam from './../fixtures/pokeTeam';
 

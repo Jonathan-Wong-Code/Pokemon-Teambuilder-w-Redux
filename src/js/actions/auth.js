@@ -1,5 +1,6 @@
 import database, { firebase, googleAuthProvider } from './../firebase/firebase';
 import { LOGIN, LOGOUT, LOGIN_GUEST, SET_SAVED_TEAMS } from './types';
+import regeneratorRuntime from 'regenerator-runtime';
 
 export const startLogin = () => async dispatch => {
   await firebase.auth().signInWithPopup(googleAuthProvider);
