@@ -13,7 +13,11 @@ class ConfirmSave extends React.Component {
   
   render() {
     return (
-      <div className='modal__background' onClick={this.props.handleToggleSaveModal}>
+      <div 
+        className='modal__background' 
+        onClick={this.props.handleToggleSaveModal} 
+        data-test='confirm-save-component'
+      >
         <div className='confirm-save__modal' onClick={(e) => e.stopPropagation()}>
           <p>Saved <span className='confirm-save__name'>{this.props.pokemon.name}</span></p>
           <button 

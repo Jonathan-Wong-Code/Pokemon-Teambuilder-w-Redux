@@ -72,6 +72,7 @@ class PokeList extends React.Component {
   }
 
   render() {
+    console.log(this.state.currentPokemon);
     return (
       <React.Fragment>
         <div className='poke-list'>

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import regeneratorRuntime from 'regenerator-runtime';
 
 class PokeCard extends React.Component {
   _isMounted = false;

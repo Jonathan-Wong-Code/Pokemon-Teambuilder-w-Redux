@@ -1,7 +1,6 @@
 import React from 'react';
 import PokeTeamListItem from './PokeTeamListItem';
 
-
 const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
   const renderPokeTeam = () => { 
     return pokeTeam.length > 0 ? (

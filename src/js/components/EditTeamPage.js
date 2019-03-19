@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import BuildPokeTeamPage from './BuildPokeTeamPage';
 import { editPokeTeam } from './../actions/pokeTeam';
 
-const EditTeamPage = ({ editPokeTeam, editedTeam, history }) => {
+export const EditTeamPage = ({ editPokeTeam, editedTeam, history }) => {
   const handleEditTeam = (pokeTeam) => {
     editPokeTeam(pokeTeam);
   };
@@ -14,6 +14,7 @@ const EditTeamPage = ({ editPokeTeam, editedTeam, history }) => {
       handleEditTeam={handleEditTeam} 
       pokeTeam={editedTeam}
       history={history}
+      data-test='build-page-component'
     />
   );
 };

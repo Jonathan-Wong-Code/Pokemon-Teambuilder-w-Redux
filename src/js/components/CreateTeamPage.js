@@ -13,6 +13,7 @@ export const CreateTeamPage = ({ history, addPokeTeam }) => {
       type='create' 
       handleAddTeam={handleAddTeam}
       history={history}
+      data-test='build-team-component'
     />
   );
 };

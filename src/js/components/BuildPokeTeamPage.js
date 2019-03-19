@@ -7,7 +7,7 @@ import SearchBar from './SearchBar';
 import PokeTeamList from './PokeTeamList';
 import SaveTeamListBtn from './SavePokeTeamBtn'
 import SavePokeTeamModal from './SavePokeTeamModal';
-// import './../../styles/components/BuildPokeTeamPage.css'
+import regeneratorRuntime from 'regenerator-runtime';
 
 class BuildPokeTeamPage extends React.Component {
   constructor(props) {
