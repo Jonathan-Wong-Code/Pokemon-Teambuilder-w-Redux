@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout, logout } from './../actions/auth';
 
-const NavBar = ({ startLogout, history, auth, logout }) => {
+export const NavBar = ({ startLogout, history, auth, logout }) => {
   const onLogoutClick = () => {
     if (auth === 'guest') {
       logout();
@@ -27,7 +27,12 @@ const NavBar = ({ startLogout, history, auth, logout }) => {
           </NavLink>
         </li>
         <li className='navbar__item'>
-          <button onClick={onLogoutClick} className='btn navbar__logout'>Logout</button>
+          <button 
+            onClick={onLogoutClick} 
+            className='btn navbar__logout'  
+            data-test='nav-bar-logout'>
+            Logout
+          </button>
         </li>
       </ul>
     </nav>

@@ -1,4 +1,5 @@
 import React from 'react';
+import regeneratorRuntime from 'regenerator-runtime';
 
 class SearchBar extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ class SearchBar extends React.Component {
  
   render() {
     return (
-    <div className='search-bar'>
+    <div className='search-bar' data-test='search-bar-component'>
       <form action='' onSubmit={this.handleSubmit} className='search-bar__form'>
         <span className='visuallyhidden' htmlFor='search-name'>Search by name</span>
         <input 
@@ -68,6 +69,7 @@ class SearchBar extends React.Component {
         <button 
           type='Submit'
           className='search-bar__submit search-bar__item btn'
+          data-test='search-bar-submit'
         >
           Search
         </button>
