@@ -37,5 +37,4 @@ describe("The unconnected NavBar component with non-guest account", () => {
     expect(logout).toHaveBeenCalled();
     expect(history.push).toHaveBeenLastCalledWith('/');
   });
-
 });

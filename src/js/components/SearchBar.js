@@ -1,7 +1,7 @@
 import React from 'react';
 import regeneratorRuntime from 'regenerator-runtime';
 
-class SearchBar extends React.Component {
+export class SearchBar extends React.Component {
   constructor() {
     super();
 
@@ -28,13 +28,14 @@ class SearchBar extends React.Component {
   render() {
     return (
     <div className='search-bar' data-test='search-bar-component'>
-      <form action='' onSubmit={this.handleSubmit} className='search-bar__form'>
+      <form action='' onSubmit={this.handleSubmit} className='search-bar__form' data-test='search-bar-form'>
         <span className='visuallyhidden' htmlFor='search-name'>Search by name</span>
         <input 
           type='text' 
           placeholder='Search Pokemon' 
           id='search-name'
           className='search-bar__name search-bar__item'
+          data-test='search-bar-input'
           value={this.state.textFilter}
           onChange={this.handleInputChange}
         />
@@ -44,7 +45,9 @@ class SearchBar extends React.Component {
           name='' id='search-type' 
           onChange={this.handleTypeChange} 
           value={this.state.type}  
-          className='search-bar__type search-bar__item'>
+          className='search-bar__type search-bar__item'
+          data-test='search-bar-select'
+        >
           <option value='all'> all</option>
           <option value='normal'>normal</option>
           <option value='fighting'>fighting</option>

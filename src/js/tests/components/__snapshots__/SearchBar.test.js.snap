@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the Searchbar Component Should an input the user can type in 1`] = `
+exports[`the Searchbar Component Should match the snapshot 1`] = `
 <div
   className="search-bar"
   data-test="search-bar-component"
@@ -8,6 +8,7 @@ exports[`the Searchbar Component Should an input the user can type in 1`] = `
   <form
     action=""
     className="search-bar__form"
+    data-test="search-bar-form"
     onSubmit={[Function]}
   >
     <span
@@ -18,6 +19,7 @@ exports[`the Searchbar Component Should an input the user can type in 1`] = `
     </span>
     <input
       className="search-bar__name search-bar__item"
+      data-test="search-bar-input"
       id="search-name"
       onChange={[Function]}
       placeholder="Search Pokemon"
@@ -32,6 +34,7 @@ exports[`the Searchbar Component Should an input the user can type in 1`] = `
     </span>
     <select
       className="search-bar__type search-bar__item"
+      data-test="search-bar-select"
       id="search-type"
       name=""
       onChange={[Function]}
