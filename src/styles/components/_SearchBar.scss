@@ -11,7 +11,7 @@
   border: 1px solid;
   border-radius: 20px;
 
-  background: linear-gradient(to right, lightgrey, white, lightgrey);
+  background: linear-gradient(to right, $color-grey-light, $color-white, $color-grey-light);
 
   display: flex;
   justify-content: center;
@@ -22,24 +22,19 @@
   border-radius: 20px;
 }
 
-.save-form__input:focus  {
-  border: 2px dashed grey;
-  background: #FFFAF0;
-}
-
 .search-bar__item:not(:last-child) {
   margin-right: 1rem;
 }
 
 .search-bar__name:focus, .search-bar__type:focus {
-  border: 2px solid black;
-  background: #FFFAF0;
+  border: 2px solid $color-white;
+  background: $color-input-focus;
 }
 
 .search-bar__name {
   width: 50%;
   padding-left: 2rem;
-  box-shadow: inset 0 0 2px 2px #888;
+  box-shadow: inset 0 0 2px 2px $color-grey;
 }
 
 .search-bar__type {
@@ -47,7 +42,7 @@
   text-align: center;
   padding: 0 1rem;
   border: none;
-  box-shadow: inset 0 0 2px 2px #888;
+  box-shadow: inset 0 0 2px 2px $color-grey;
 }
 
 .search-bar__submit {

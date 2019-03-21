@@ -17,14 +17,14 @@
 
 .save-form__input {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid $color-black;
   border-radius: 20px;
   padding: .5rem 1rem;
 }
 
 .save-form__input:focus  {
-  border: 2px dashed grey;
-  background: #FFFAF0;
+  border: 2px dashed $color-grey;
+  background: $color-input-focus;
 }
 
 .save-form__buttons {

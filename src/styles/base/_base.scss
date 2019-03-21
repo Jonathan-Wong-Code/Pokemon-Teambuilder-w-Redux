@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Jura', sans-serif;
+  font-family: $font-primary;
   font-size: 1.2rem;
   line-height:1.6;
   background: url('../images/pokedex.png');
@@ -35,79 +35,9 @@ img {
   margin: 0 auto;
 }
 
-.btn.is-active {
-  background: red;
-  color:white;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-  transform: scale(1.05);
-  background-size: 100%;
-}
-
-.btn {
-  text-align: center;
-  display: block;
-  border: 1px solid black;
-  border-radius: 10px;
-  font-weight: 600;
-  background: linear-gradient(45deg, lightgrey, white, lightgrey 50%,red 50%);
-  background-size: 300%;
-  transition: all .3s;
-}
-
-.btn:hover, .btn:focus {
-  transform: scale(1.05);
-  background-position: 100%;
-  color:white;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-}
-
-.btn:focus {
-  border: 3px solid black;       
-}
-
-.btn:disabled:hover {
-  color: grey;
-  background-position: 0;
-  text-shadow: none;
-  transform: none;
-}
-
 @media (max-width: 750px) {
   body {
     font-size: 1rem;
-  }
-
-  .btn {
-    background-size: 240%;
-  }
-
-  .btn:hover, .btn:focus {  
-    background-position: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .btn {
-    background: linear-gradient(45deg, lightgrey, white, lightgrey);
-    background-size: 100%;
-    outline:none;
-  }
-
-  .btn:hover, .btn:focus {
-    transform: scale(1);
-    background-position: 100%;
-    color:#000;
-    text-shadow:none;
-    border:1px solid #000;
-    outline:none;
   }
 }
 

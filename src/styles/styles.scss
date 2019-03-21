@@ -1,4 +1,6 @@
-@import './base';
+@import './base/_variables';
+@import './base/base';
+@import './base/reusables';
 @import './components/BuildPokeTeamPage';
 @import './components/ConfirmSave';
 @import './components/Header';

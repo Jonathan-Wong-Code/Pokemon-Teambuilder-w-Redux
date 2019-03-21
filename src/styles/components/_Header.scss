@@ -4,13 +4,13 @@
 
   padding: 2rem 0;
   
-  color:#000;
+  color:$color-black;
   background:linear-gradient(to top right, 
-    rgba(128,128,128,1),
-    rgba(211,211,211,1), 
-    rgba(255,255,255,1), 
-    rgba(211,211,211,1), 
-    rgba(128,128,128,1)
+    $color-grey,
+    $color-grey-light, 
+    $color-white, 
+    $color-grey-light, 
+    $color-grey
   );
   
 
@@ -20,13 +20,13 @@
 }
 
 .header-login-box {
-  background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.0)),url('./../images/login6.png');
+  background: linear-gradient(rgba($color-black,.2),rgba($color-black,0)),url('./../images/login6.png');
   background-size: 100% 100%;
   background-position: 20% center;
 }
 
 .header--login {
-  color:white;
+  color:$color-white;
   background: none;
   padding: 0;
 }
@@ -48,7 +48,7 @@
 }
 
 .header__heading {
-  font-family: 'Voces', cursive;
+  font-family: $font-secondary;
   font-size: 4rem;
   letter-spacing: 3px;
   text-align: center;  

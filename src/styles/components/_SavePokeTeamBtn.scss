@@ -15,7 +15,7 @@
   padding: .5rem .7rem;
   margin: 1rem .5rem 0 .5rem;
   border-radius: 10px;
-  background: linear-gradient(to right, lightgrey, white, lightgrey);
+  background: linear-gradient(to right, $color-grey-light, $color-white, $color-grey-light);
   text-align:left;
 }
 

@@ -4,11 +4,11 @@
   text-align: center;
   font-weight:400;
   padding: 1.5rem;
-  background-image:linear-gradient(to right,lightgrey, white, lightgrey);
+  background: linear-gradient(to right, $color-grey-light, $color-white, $color-grey-light);
   z-index:100000;
   margin: auto;
   border-radius:20px;
-  border:5px solid #000;
+  border:5px solid $color-black;
 }
 
 .confirm-save__btn {

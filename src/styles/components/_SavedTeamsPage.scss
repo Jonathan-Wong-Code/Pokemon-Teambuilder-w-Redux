@@ -13,7 +13,7 @@
   margin: 0 auto;
   border-radius: 20px;
 
-  background: linear-gradient(lightgrey, white, lightgrey);
+  background: linear-gradient($color-grey-light, $color-white, $color-grey-light);
 }
 
 .saved-teams__error {
@@ -27,7 +27,7 @@
   padding: 1rem 0;
   border-radius: 20px;
 
-  background-image: linear-gradient(to right, #96D9D6, #fff, #96D9D6);
+  background-image: linear-gradient(to right, $color-ice, $color-white, $color-ice);
 }
 
 @media(max-width: 1700px) {

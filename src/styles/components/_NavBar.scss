@@ -16,7 +16,7 @@
 .navbar__link {
   text-decoration: none;
   padding: .5rem 1rem;
-  color: black;
+  color: $color-black;
 }
 
 .navbar__logout {
@@ -32,7 +32,7 @@
     font-size: 1rem;
     text-decoration: none;
     padding: .5rem .7rem;
-    color: black;
+    color: $color-black;
   }
 
   .navbar__logout {

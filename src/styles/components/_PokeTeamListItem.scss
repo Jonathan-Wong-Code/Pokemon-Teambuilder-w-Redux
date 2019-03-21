@@ -1,10 +1,10 @@
 .team-member {
   padding: 2rem 1rem;
 
-  border: 1px solid black;
+  border: 1px solid $color-black;
   border-radius: 40px;
 
-  background-image: linear-gradient(to right, #96D9D6, #fff, #96D9D6);
+  background-image: linear-gradient(to right, $color-ice, $color-white, $color-ice);
 
   display: grid;
   justify-items: center;
@@ -38,7 +38,7 @@
   font-size: 1rem;
   margin-top: 1rem;
   padding: .2rem .7rem;
-  border: 1px solid black;
+  border: 1px solid $color-black;
 }
 
 @media(max-width:900px) {
