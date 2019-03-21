@@ -76,4 +76,6 @@ const pokeTeam = {
   }
 };
 
-export default pokeTeam;
+const singlePokeTeam = pokeTeam.team1;
+
+export { singlePokeTeam, pokeTeam as default };

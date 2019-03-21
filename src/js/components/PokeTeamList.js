@@ -10,6 +10,7 @@ const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
             key={pokemon.uniqueId} 
             pokemon={pokemon} 
             handleRemovePokemon={handleRemovePokemon}
+            data-test='poke-team-list-item'
           />
         );
       })) : null;

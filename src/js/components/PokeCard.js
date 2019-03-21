@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import pokeapi from './../apis/pokeapi';
 import regeneratorRuntime from 'regenerator-runtime';
 
 class PokeCard extends React.Component {
@@ -16,7 +17,7 @@ class PokeCard extends React.Component {
     this._isMounted = true;
     try {
       if(this._isMounted) {
-        const response = await axios.get(`${this.props.pokemon.url}`);
+        const response = await pokeapi.get(`/pokemon/${this.props.pokemon.name}`);
         await this.setState({currentPokemon : response.data});
       }
     } catch (error){
@@ -48,15 +49,19 @@ class PokeCard extends React.Component {
           tabIndex='0' 
           className='poke-card__item'   
           onKeyPress={this.onPokeCardKeyPress}
+          data-test = 'poke-card-item'
         >
         
           <div className='poke-card__img-box'>
             <img 
               src={this.state.currentPokemon.sprites.front_default} 
               alt={`A sprite image of ${this.state.currentPokemon.name}`}
+              data-test='poke-card-img'
             />
           </div>
-          <p className='poke-card__name'>{this.state.currentPokemon.name}</p>
+          <p className='poke-card__name' data-test='poke-card-name'>
+            {this.state.currentPokemon.name}
+          </p>
         </li>       
       ) 
     } else {

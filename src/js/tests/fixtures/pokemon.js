@@ -1,6 +1,7 @@
 
 const pokemon = {
   name : 'poketest',
+  url : 'testabc123',
   sprites : {
     front_default : 'sprite'
   },

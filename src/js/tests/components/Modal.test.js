@@ -39,7 +39,7 @@ describe('the unconnected modal component with no error', () => {
     expect(handleTogglePokeModal).not.toHaveBeenCalled();
   });
 
-  it('Should close the Modal whe nthe user clicks the Cancel button', () => {
+  it('Should close the Modal when the user clicks the Cancel button', () => {
     wrapper.find(`[data-test='modal-cancel']`).simulate('click');
     expect(handleTogglePokeModal).toHaveBeenCalled();
   });
