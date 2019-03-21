@@ -20,6 +20,10 @@ describe("The unconnected ConfirmSave component", () => {
     wrapper.unmount();
   });
 
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('Should render the ConfirmSave component', () => {
     expect(wrapper.find(`[data-test='confirm-save-component']`).length).toBe(1);
   });

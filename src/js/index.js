@@ -17,7 +17,7 @@ const jsx = (
     <App />
   </Provider>
 );
-	
+
 ReactDOM.render(<p> Loading...</p>, document.getElementById('app'));
 
 let isRendered = false;

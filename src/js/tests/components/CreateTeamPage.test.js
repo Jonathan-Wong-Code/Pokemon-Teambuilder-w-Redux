@@ -12,10 +12,12 @@ describe("the unconnected CreamTeamPage component", () => {
     wrapper = shallow(<CreateTeamPage />);
   });
 
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  
   it('Should render the BuildTeamPage component with proper type prop', () => {
     expect(wrapper.find(BuildTeamPage).length).toBe(1);
     expect(wrapper.find(BuildTeamPage).prop('type')).toBe('create');
   });
-
-
 });

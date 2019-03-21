@@ -123,6 +123,10 @@ describe('The SavePokeTeamModal Component when team is being edited', () => {
     wrapper = mount(<SavePokeTeamModal {...defaultProps} />);
   });
 
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  
   it('Should render the component', () => {
     expect(wrapper.find(`[data-test='save-form-component']`).length).toBe(1);
   });
@@ -134,6 +138,5 @@ describe('The SavePokeTeamModal Component when team is being edited', () => {
 
   it('Should render the submit button with the correct text', () => {
     expect(wrapper.find(`[data-test='save-form-submit']`).text()).toBe('Edit Team');
-
   })
 });

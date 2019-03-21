@@ -25,6 +25,10 @@ describe('the unconnected modal component with no error', () => {
     wrapper.unmount();
   });
 
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('Should render the modal component', () => {
     expect(wrapper.find(`[data-test='modal-component']`).length).toBe(1);
   });

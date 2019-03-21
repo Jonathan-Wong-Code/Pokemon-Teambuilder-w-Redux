@@ -19,7 +19,11 @@ describe("the connected login page", () => {
       <LoginPage {...defaultProps} />
     );
   });
-
+  
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  
   it('Should render the login component', () => {
     expect(wrapper.find(`[data-test='login-component']`).length).toBe(1);
   });

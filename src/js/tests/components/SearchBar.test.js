@@ -9,6 +9,10 @@ describe("the Searchbar Component", () => {
     wrapper = shallow(<SearchBar handlePokeSearch={handlePokeSearch} />);
   });
 
+  it('Should render a snapshot of the component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('Should render the SearchBar component', () => {
     expect(wrapper.find(`[data-test='search-bar-component']`).length).toBe(1);
   });
