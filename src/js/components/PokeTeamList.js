@@ -17,7 +17,7 @@ const PokeTeamList = ({ pokeTeam, handleRemovePokemon }) => {
   };
 
   return (
-    <section className='poke-team'>
+    <section className='poke-team' data-test='poke-team-list-component'>
       <ul className='poke-team__list'>
         {renderPokeTeam()}
       </ul>

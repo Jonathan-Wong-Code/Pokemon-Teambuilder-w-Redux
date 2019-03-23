@@ -355,6 +355,7 @@ exports[`The connected Saved Teams Page with pokeTeams saved Should render a sna
                 </Link>
                 <button
                   className="btn team-cell__button"
+                  data-test="team-cell-delete"
                   onClick={[Function]}
                 >
                   Delete
@@ -566,6 +567,7 @@ exports[`The connected Saved Teams Page with pokeTeams saved Should render a sna
                 </Link>
                 <button
                   className="btn team-cell__button"
+                  data-test="team-cell-delete"
                   onClick={[Function]}
                 >
                   Delete
@@ -777,6 +779,7 @@ exports[`The connected Saved Teams Page with pokeTeams saved Should render a sna
                 </Link>
                 <button
                   className="btn team-cell__button"
+                  data-test="team-cell-delete"
                   onClick={[Function]}
                 >
                   Delete

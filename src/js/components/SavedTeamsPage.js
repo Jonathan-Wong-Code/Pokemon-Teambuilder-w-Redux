@@ -3,22 +3,15 @@ import SavedTeamsList from './SavedTeamsList';
 import { connect } from 'react-redux';
 
 export class SavedTeamsPage extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      savedTeams : {}
-    };
-  }
-
   renderResults = () => {
     return this.props.savedTeams.length === 0 ? (
-        <p className='saved-teams__error'>No Teams Saved</p>    
+        <p className='saved-teams__error' data-test='saved-teams-error'>
+          No Teams Saved
+        </p>    
     ) : (    
       <SavedTeamsList 
         savedTeams={this.props.savedTeams} 
         handleRemoveTeam={this.handleRemoveTeam}
-        
       />  
     )
   }

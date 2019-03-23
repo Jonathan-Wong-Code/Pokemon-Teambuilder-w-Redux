@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const PokemonTypes = ({ type }) => {
   return (
     <span className={`pokemon-type pokemon-type--${type.type.name}`} key={type.type.name}>     
