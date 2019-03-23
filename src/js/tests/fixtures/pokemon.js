@@ -2,6 +2,7 @@
 const pokemon = {
   name : 'poketest',
   url : 'testabc123',
+  uniqueId : 'pokeId',
   sprites : {
     front_default : 'sprite'
   },

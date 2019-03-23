@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deletePokeTeam } from './../actions/pokeTeam';
 
-const SavedTeamsCell = ({ team, deletePokeTeam }) => {
+export const SavedTeamsCell = ({ team, deletePokeTeam }) => {
   const renderPokemonImg = () => {
     return team.pokemon.map(pokemon => {
       return (

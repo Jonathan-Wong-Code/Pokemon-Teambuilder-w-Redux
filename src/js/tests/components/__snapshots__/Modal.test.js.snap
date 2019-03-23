@@ -68,6 +68,7 @@ exports[`the unconnected modal component with no error Should render a snapshot 
           },
         },
       ],
+      "uniqueId": "pokeId",
       "url": "testabc123",
     }
   }
