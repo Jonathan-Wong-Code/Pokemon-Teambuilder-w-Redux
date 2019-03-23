@@ -13,6 +13,7 @@ const SavedTeamsCell = ({ team, deletePokeTeam }) => {
             src={pokemon.sprites.front_default} 
             alt={pokemon.name} 
             className='team-cell__img' 
+            data-test='saved-team-cell-img'
           />
         </li>
       );
@@ -25,21 +26,33 @@ const SavedTeamsCell = ({ team, deletePokeTeam }) => {
 
   if (!team.pokemon) return <div />;
   return (
-    <li className='team-cell'>
+    <li className='team-cell' data-test='saved-teams-cell'>
       <ul className='team-cell__img-list'>
         {renderPokemonImg()}
       </ul>
 
-      <h2 className='team-cell__heading'>{team.name}</h2>
-      <p className='team-cell__createdAt'>
+      <h2 className='team-cell__heading' data-test='team-cell-name'>{team.name}</h2>
+      <p className='team-cell__createdAt' data-test='team-cell-date'>
         Created: {moment(team.createdAt).format('MMM Do YYYY')}
       </p>
-      <p className='team-cell__description'>{team.description}</p>
-      <div className='team-cell__buttons '>
-        <Link to={`/edit/${team.id}`} className='btn team-cell__button'>
+      <p className='team-cell__description' data-test='team-cell-description'>  
+        {team.description}
+      </p>
+      <div className='team-cell__buttons'>
+        <Link 
+          to={`/edit/${team.id}`} 
+          className='btn team-cell__button'
+          data-test='team-cell-link'
+        >
           Edit
         </Link>
-        <button onClick={onDeleteClick} className='btn team-cell__button'>Delete</button>
+        <button 
+          onClick={onDeleteClick} 
+          className='btn team-cell__button'
+          data-test='team-cell-delete'
+        >
+        Delete
+        </button>
       </div>
     </li>
   );

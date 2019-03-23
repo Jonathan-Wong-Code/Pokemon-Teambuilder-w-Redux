@@ -12,7 +12,7 @@ const SavedTeamsList = ({ savedTeams }) => {
   });
 
   return (
-    <div className='saved-teams'>
+    <div className='saved-teams' data-test='saved-teams-list'>
       <ul className='saved-teams__list'>
         {renderTeamCell()}
       </ul>
